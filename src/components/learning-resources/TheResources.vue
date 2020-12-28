@@ -47,6 +47,7 @@ export default {
     return {
       resources: this.storedResources,
       addResource: this.addResource,
+      deleteResource: this.removeResource,
     }
   },
   computed: {
@@ -75,6 +76,10 @@ export default {
       // set the tab to show all resources after a new resource
       this.setSelectedTab('stored-resources')
     },
+    removeResource(resId) {
+      const resIndex = this.storedResources.findIndex(res => res.id === resId);
+      this.storedResources.splice(resIndex, 1);
+    }
   },
 }
 </script>
