@@ -62,10 +62,6 @@ export default {
       this.selectedTab = tab;
     },
     addResource(title, description, url) {
-      console.log(title);
-      console.log(description);
-      console.log(url);
-
       const newResource = {
         // Preferably this should be a unique id, this is okey for now
         id: new Date().toISOString(),
